@@ -1,0 +1,20 @@
+{
+    "name": "cwschmidt.art",
+    "version": "1.0.0",
+    "description": "Home of my paintings and drawings",
+    "scripts": {
+        "build": "../zola build && npx tailwindcss -i ./static/input.css -o ./public/style.css -m",
+        "serve": "../zola serve --interface 0.0.0.0 & npx tailwindcss -i ./static/input.css -o ./static/style.css --watch && wait",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "<YOUR_PROJECT_REPO>"
+    },
+    "author": "Christian Schmidt",
+    "license": "Proprietary",
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.15",
+        "tailwindcss": "^3.3.1"
+    }
+}

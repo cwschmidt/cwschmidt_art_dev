@@ -1,0 +1,67 @@
+# The URL the site will be built for
+base_url = "https://cwschmidt.art"
+
+# The site title and description; used in feeds by default.
+title = "Welcome to cwschmidt.art"
+description = "Home of my paintings and drawings"
+
+# The default language; used in feeds.
+default_language = "en"
+
+# The default author for pages
+author = "Christian Schmidt"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = false
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = false
+
+[markdown]
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+highlight_code = false
+
+[extra]
+
+menu = [
+    { title = "Home",       link = "/home",       width = "w-1/5", height = "h-1/2" },
+    { title = "Gallery",    link = "/gallery",    width = "w-1/5", height = "h-1/2" },
+    #{ title = "Comissions", link = "/comissions", width = "w-1/5", height = "h-1/2" },
+    { title = "Contact",    link = "/contact",    width = "w-1/5", height = "h-1/2" },
+]
+
+socials = [
+    { name = "Instagram",   image = "instagram.png", handle = "@cwschmidt.art", url = "https://instagram.com/cwschmidt.art" },
+    { name = "Threads",     image = "thread.png",    handle = "@cwschmidt.art", url = "https://www.threads.net/@cwschmidt.art" },
+    { name = "Facebook",    image = "facebook.png",  handle = "@cwschmidt.art", url = "https://www.facebook.com/cwschmidt.art" },
+    { name = "X (Twitter)", image = "twitter.png",   handle = "@cwschmidt_art", url = "https://x.com/cwschmidt_art" },
+]
+
+
+# https://ko-fi.com/cwschmidt_art
+# https://linktr.ee/cwschmidt.art
+
+
+#    { name = "Mastodon", url = "https://toot.cafe/@17cupsofcoffee" },
+#    { name = "Cohost", url = "https://cohost.org/17cupsofcoffee" },
+#    { name = "GitHub", url = "https://github.com/17cupsofcoffee"  },
+#    { name = "Itch.io", url = "https://17cupsofcoffee.itch.io/" },
+#    { name = "YouTube", url = "https://youtube.com/@17cupsofcoffee" },
+#    { name = "SoundCloud", url = "https://soundcloud.com/17cupsofcoffee" },
+#    { name = "Twitch", url = "https://www.twitch.tv/17cupsofcoffee" },
+
+comission = [
+    { thumb_no = "00", title = "A5", size="14,8 x 21", price="350,00€",           medium = "graphite", description = "For single portraits" },
+    { thumb_no = "01", title = "A4", size="21 x 29,7", price="350,00 - 500,00 €", medium = "graphite", description = "For single, double or fullbody portraits" },
+    { thumb_no = "02", title = "A3", size="29,7 x 42", price="350,00 - 500,00 €", medium = "charcoal", description = "For single, double or triple portraits" },
+ ]
+
+gallery = [
+    { thumb_no = "00", paper_size = "A4", year = "2023", orientation = "portrait", title = "Kurt Gödel",                  medium = "Graphite on paper",                   price="450,00€", description = "Czech Mathematician" },
+    { thumb_no = "01", paper_size = "A4", year = "2022", orientation = "portrait", title = "M.C. Escher",                 medium = "Graphite on paper",                   price="450,00€", description = "Dutch Artist and Mathematician" },
+    { thumb_no = "02", paper_size = "A4", year = "2023", orientation = "portrait", title = "Viktoria",                    medium = "Graphite on paper",                   price="Sold",    description = "Portrait of the granddaughter of a friend of mine" },
+    { thumb_no = "03", paper_size = "A5", year = "2021", orientation = "portrait", title = "Woman",                       medium = "Graphite on paper",                   price="Sold",    description = "Intensely looking woman" },
+    { thumb_no = "04", paper_size = "A3", year = "2020", orientation = "landscape", title = "Bud Spencer & Terence Hill", medium = "Charcoal on paper",                   price="400,00€", description = "Portrait of Bud Spencer & Terence Hill" },
+    { thumb_no = "05", paper_size = "A4", year = "2020", orientation = "portrait", title = "Sean Connery",                medium = "Acryl, graphite and marker on paper", price="400,00€", description = "Portrait of Sir Sean Connery" },
+]

@@ -1,0 +1,48 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to cwschmidt.art</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+    <style>
+        {{ macros::gallery_style(invert=false) }}
+    </style>
+</head>
+
+<body class="zilla-slab-regular bg-orange-100">
+    <section">
+        <header>
+            {{ macros::menu(invert=false) }}
+        <header>
+    </section>
+    <section class="section">
+        <main class="container">
+            <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="mt-28">
+                {% block content %} {% endblock %}
+            </div>
+            </div>
+        </main>
+    </section>
+    <section class="section">
+        <footer class="fixed w-full bg-orange-400 bottom-0 text-white text-center">
+            <span class="flex flex-row">
+                <span class="flex-grow text-center">&nbsp;© 08/2024 - {{ now() | date(format="%m/%Y") }}&nbsp;<a href="{{ get_url(path="/") }}">Christian Schmidt</a>. Powered by&nbsp;<a href="https://www.getzola.org/">Zola</a>.</span>
+                <span class="text-right"><a href="./legal_notice">Legal Notice</a></span>
+                <span>&nbsp;/&nbsp;</span> 
+                <span class="text-right"><a href="./privacy_policy">Privacy Policy&nbsp;</a></span>
+            </span>
+        </footer>
+    </section>
+</body>
+
+</html>

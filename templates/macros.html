@@ -1,0 +1,104 @@
+<!-- Menu items -->
+{% macro menu(invert=false) %}
+<nav class="fixed w-full top-0 z-50 zilla-slab-bold text-3xl text-white bg-orange-400 shadow-md">
+    <div class="flex flex-row space-x-4">
+        <a class="flex flex-grow " href="/home">
+            <div class="bg-[url('logo.png')] w-[640px] h-[120px] bg-no-repeat"></div>
+        </a>
+        <div class="flex items-center justify-center space-x-4">
+        {% for menu in config.extra.menu %} 
+           <a class="rounded-lg shadow-lg p-4 hover:bg-orange-300 hover:text-orange-400" href="{{ menu.link }}">{{ menu.title }}</a>
+        {% endfor %}
+        </div>     
+    </div>
+</nav>
+{% endmacro menu %}
+
+<!-- Gallery style for previews -->
+{% macro gallery_style(invert=false) %}
+/* Style to show the modal when targeted */
+{% for gallery in config.extra.gallery %} 
+    #modal{{gallery.thumb_no}}:target {
+        display: flex; /* Show the modal as a flex container */
+    }
+{% endfor %}
+{% endmacro gallery_style %}
+
+<!-- Gallery images --> 
+{% macro gallery(invert=false) %}
+    <div class="gallery{% if invert %} invert{% endif %}">
+        <div class="grid grid-cols-2 grid-flow-row gap-8">
+            {% for gallery in config.extra.gallery %} 
+                <a class="grid grid-cols-2" href="#modal{{gallery.thumb_no}}">
+                    <div class="border-2 rounded-lg border-orange-400 bg-black/10 bg-center bg-no-repeat h-48" style="background-image: url(gallery/{{gallery.thumb_no}}_thumb.jpg)"></div>
+                    <div class="flex flex-col ml-4 cursor-pointer">
+                        <p class="font-bold text-2xl text-orange-400">{{ gallery.title }}</p>
+                        <p class="text-lg">{{ gallery.description }}</p>
+                        <p class="text-md">{{ gallery.medium }},</p>
+                        <p class="text-md">{{ gallery.paper_size }}, {{ gallery.year }}</p>
+                        <!--p class="font-bold">{{ gallery.price }}</p-->
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    {% for gallery in config.extra.gallery %} 
+    <!-- Modal -->
+    <div class="relative">
+        <div id="modal{{gallery.thumb_no}}" class="hidden fixed inset-0 flex justify-center items-center z-50">
+            <div class="relative">
+                <a href="#">
+                    <div class="bg-cover rounded-lg shadow-lg" style="background-image: url(gallery/{{gallery.thumb_no}}_preview.jpg)">
+                        <img class="border-2 border-orange-400 max-w-full max-h-full rounded-lg shadow-lg" src="gallery/{{gallery.orientation}}.gif" alt="Enlarged Image">
+                    </div>
+                </a>    
+                <a href="#" class="absolute top-2 right-4 text-black text-2xl font-bold">&times;</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endmacro gallery %}
+
+<!-- Comission --> 
+{% macro comission(invert=false) %}
+    <div class="comission{% if invert %} invert{% endif %}">
+        <div class="grid grid-rows-3 gap-4">
+            {% for comission in config.extra.comission %}
+                <div class="flex bg-auto bg-no-repeat px-2 h-48" style="background-image: url(comissions/{{comission.thumb_no}}_thumb.jpg)">
+                    <div class="w-1/3"></div>
+                    <div class="w-1/3 px-4">
+                        <p class="font-bold">{{ comission.title }}</p>
+                        <p class="text-sm">{{ comission.size }}</p>
+                        <p>{{ comission.medium }}</p>
+                    </div>
+                    <div class="grid place-items-center w-1/3 px-4">
+                        <p class="font-bold text-center">{{ comission.price }}</p>
+                    </div>
+                    <div class="w-1/3 px-4">
+                        <p>{{ comission.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endmacro comission %}
+
+<!-- Social network contact adresses --> 
+{% macro socials(invert=false) %}
+    <div class="flex flex-col socials{% if invert %} invert{% endif %}">
+        {% for social in config.extra.socials %}
+        <div class="flex flex-row items-center space-x-4">
+            <!-- Clickable Image -->
+            <a href="{{ social.url }}" target="_blank" class="flex-shrink-0">
+              <img class="w-12 h-12" src="{{ social.image }}" alt="{{ social.name }}">
+            </a>
+            
+            <!-- Texts -->
+            <div class="flex flex-col">
+              <a class="text-sm" href="{{ social.url }}" target="_blank">{{ social.name }}:</a>
+              <a class="text-lg" href="{{ social.url }}" target="_blank">{{ social.handle }}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endmacro socials %}
