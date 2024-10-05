@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Home of my paintings and drawings",
     "scripts": {
-        "build": "rm -rf ../cwschmidt_art_public_html && ../zola build --output-dir ../cwschmidt_art_public_html && npx tailwindcss -i ./input.css -o ../cwschmidt_art_public_html/style.css -m",
+        "build": "../zola build --force --output-dir ../cwschmidt_art/public_html && npx tailwindcss -i ./input.css -o ../cwschmidt_art/public_html/style.css -m",
         "serve": "../zola serve --interface 0.0.0.0 & npx tailwindcss -i ./input.css -o ./static/style.css --watch && wait",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
