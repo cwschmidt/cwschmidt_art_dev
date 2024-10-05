@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "description": "Home of my paintings and drawings",
     "scripts": {
-        "build": "rm -rf ../public_html && ../zola build --output-dir ../public_html && npx tailwindcss -i ./static/input.css -o ../public_html/style.css -m",
-        "serve": "../zola serve --interface 0.0.0.0 & npx tailwindcss -i ./static/input.css -o ./static/style.css --watch && wait",
+        "build": "rm -rf ../public_html && ../zola build --output-dir ../public_html && npx tailwindcss -i ./input.css -o ../public_html/style.css -m",
+        "serve": "../zola serve --interface 0.0.0.0 & npx tailwindcss -i ./input.css -o ./static/style.css --watch && wait",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
