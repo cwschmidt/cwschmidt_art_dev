@@ -9,7 +9,7 @@ template = "home.html"
 
 My name is Christian Schmidt. I live in Germany in the historial city of Regensburg in Bavaria.
 
- <img class="border-2 border-orange-400 rounded-lg mt-2 mr-4 float-left" src="../home/me.jpg" alt="Me, painting."/>
+ <img class="border-2 border-orange-400 rounded-lg mt-2 mr-4 float-left" src="get_url({{ config.base }}/home/me.jpg)" alt="Me, painting."/>
 
 Painting and drawing is a hobby of mine, since I was a little child. In the last few years, I intensified my efforts in this area to improve futher. I experiment with a lot of mediums, like oil, gouache and aquarell color for painting and also charcoal, graphite, color-pencils and oil pastels for drawing.
 

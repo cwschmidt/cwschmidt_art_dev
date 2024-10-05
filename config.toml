@@ -1,5 +1,9 @@
 # The URL the site will be built for
-base_url = "https://cwschmidt.art"
+#[build]
+base_url = "https://www.cwschmidt.art"
+
+#[serve]
+#base_url = "/"
 
 # The site title and description; used in feeds by default.
 title = "Welcome to cwschmidt.art"
