@@ -2,12 +2,12 @@
 {% macro menu(invert=false) %}
 <nav class="fixed w-full top-0 z-50 zilla-slab-bold text-3xl text-white bg-orange-400 shadow-md">
     <div class="flex flex-row space-x-4">
-        <a class="flex flex-grow " href="/home">
+        <a class="flex flex-grow " href="{{ config.base_url }}home">
             <div class="bg-[url('logo.png')] w-[640px] h-[120px] bg-no-repeat"></div>
         </a>
         <div class="flex items-center justify-center space-x-4">
         {% for menu in config.extra.menu %}
-           <a class="rounded-lg shadow-lg p-4 hover:bg-orange-300 hover:text-orange-400" href="{{ menu.link }}">{{ menu.title }}</a>
+           <a class="rounded-lg shadow-lg p-4 hover:bg-orange-300 hover:text-orange-400" href="{{ config.base_url }}{{ menu.link }}">{{ menu.title }}</a>
         {% endfor %}
         </div>
     </div>

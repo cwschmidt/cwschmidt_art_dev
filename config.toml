@@ -1,7 +1,7 @@
 # The URL the site will be built for
 #[build]
 #base_url = "https://www.cwschmidt.art"
-base_url = "https://cwschmidt.github.io/cwschmidt_art"
+base_url = "https://cwschmidt.github.io/cwschmidt_art/public_html/"
 
 #[serve]
 #base_url = "/"
