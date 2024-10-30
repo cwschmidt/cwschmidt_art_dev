@@ -12,7 +12,7 @@ Christian Schmidt
 
 ### Contact:
 Christian Schmidt, 93059 Regensburg, GERMANY<br/>
-Email: christiancwschmidt.art (AT) hotmail (DOT) com
+Email: cwschmidt.art (AT) hotmail (DOT) com
 
 
 ## Disclaimer:

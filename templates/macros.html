@@ -5,7 +5,7 @@
         <a class="flex flex-grow " href="{{ config.base_url }}/home">
             <div class="bg-[url('sm-logo.png')] w-[320px] h-[60px] bg-center md:bg-[url('md-logo.png')] md:w-[640px] md:h-[120px] md:bg-left bg-no-repeat"></div>
         </a>
-        <div class="flex lg:p-2 items-center lg:justify-center space-x-4">
+        <div class="flex text-2xl lg:text-3xl lg:p-2 items-center lg:justify-center space-x-4">
         {% for menu in config.extra.menu %}
            <a class="rounded-lg shadow-lg lg:p-2 hover:bg-orange-300 hover:text-orange-400" href="{{ config.base_url }}/{{ menu.link }}">{{ menu.title }}</a>
         {% endfor %}
