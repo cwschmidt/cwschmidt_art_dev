@@ -38,8 +38,8 @@
                 <span class="flex flex-row">
                     <span class="flex-grow text-left pl-2">© {{ config.author}}, {{ now() | date(format="%m/%Y") }}</span>
                     <span class="text-right">
-                        <span>&nbsp;|&nbsp;<a href="./legal_notice">Legal Notice</a></span>
-                        <span class="pr-2">&nbsp;|&nbsp;<a href="./privacy_policy">Privacy Policy</a></span>
+                        <span>&nbsp;|&nbsp;<a href="{{ config.base_url }}/legal_notice">Legal Notice</a></span>
+                        <span class="pr-2">&nbsp;|&nbsp;<a href="{{ config.base_url }}/privacy_policy">Privacy Policy</a></span>
                     </span>
                 </span>
             </span>
